@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICT Hub Nyamira — Short Courses for Youth</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="logo">
+        <div class="img-wrapper">
+            <img src="logo.png" alt="" style="width: 50px;">
+        </div>
+    </div>
+    <div class="container header-row">
+      <h1 class="brand">ICT Hub Nyamira</h1>
+
+      <!-- Accessible hamburger toggle for small screens -->
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#apply">Apply</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#more">More</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <h2>Empowering Nyamira youth with practical ICT skills</h2>
+          <p>Join our short courses and start building digital skills for employment and entrepreneurship.</p>
+          <a class="btn" href="#apply">Apply for next cohort</a>
+        </div>
+        <div class="hero-right">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d4b2f2f7d6e2a1a3d9b2b8f2f6b7a2a" alt="Students learning with laptops" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About ICT Hub Nyamira</h3>
+      <p>ICT Hub Nyamira is a community-driven training center offering short, practical courses to youth across Nyamira County. We focus on hands-on learning in web development, digital marketing, mobile app development, and basic IT skills to help learners get jobs or start businesses.</p>
+    </section>
+
+    <section id="courses" class="container courses">
+      <h3>Our short courses</h3>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>Basic Computer Skills & Office</li>
+        <li>Graphic Design (Canva & Photoshop basics)</li>
+        <li>Mobile App Development (Flutter / React Native)</li>
+        <li>Digital Marketing & Social Media</li>
+        <li>Intro to Data Analytics</li>
+      </ul>
+    </section>
+
+    <section id="apply" class="container apply">
+      <h3>Course application — Next cohorts</h3>
+      <p>Fill out the form below to apply for the next cohort. We will contact shortlisted applicants with details.</p>
+
+      <form id="applicationForm" novalidate>
+        <div class="form-grid">
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" required />
+
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="10" max="100" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" pattern="^\+?[0-9\s-]{7,20}$" placeholder="e.g. +254712345678" required />
+
+          <label for="course">Course</label>
+          <select id="course" name="course" required>
+            <option value="">-- select a course --</option>
+            <option>Web Development</option>
+            <option>Basic Computer Skills</option>
+            <option>Graphic Design</option>
+            <option>Mobile App Development</option>
+            <option>Digital Marketing</option>
+            <option>Data Analytics</option>
+          </select>
+
+          <label for="cohort">Preferred cohort</label>
+          <select id="cohort" name="cohort">
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Weekend</option>
+          </select>
+
+          <label for="message">Short message (optional)</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit application</button>
+          <div id="formMessage" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact us</h3>
+      <p>Visit us or reach out via phone or email.</p>
+      <ul>
+        <li><strong>Address:</strong> ICT Hub, Nyamira County, Kenya</li>
+        <li><strong>Phone:</strong> <a href="tel:+254712345678">+254 712 345 678</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@icthub-nyamira.org">info@icthub-nyamira.org</a></li>
+      </ul>
+
+      <div class="map-container">
+        <iframe
+          class="map-embed"
+          src="https://maps.google.com/maps?q=Nyamira%20County%20Offices%2C%20Nyamira%2C%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="300" loading="lazy" allowfullscreen title="Nyamira County Offices map"></iframe>
+        <p class="map-caption">Nyamira County Offices — <a href="https://www.google.com/maps/search/?api=1&query=Nyamira+County+Offices+Nyamira+Kenya" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> ICT Hub Nyamira — Empowering youth with ICT skills</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
